@@ -14,7 +14,7 @@
         "outputPath": "/Users/enslaver/Code/courses/pv293/cumio/src/Api/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/enslaver/.config/NuGet/NuGet.Config"
+          "/Users/enslaver/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -23,7 +23,7 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net70": {
+          "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
               "/Users/enslaver/Code/courses/pv293/cumio/src/Application/Application.csproj": {
@@ -39,7 +39,7 @@
         }
       },
       "frameworks": {
-        "net70": {
+        "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
             "FluentValidation.AspNetCore": {
@@ -61,7 +61,40 @@
               "version": "[6.2.3, )"
             }
           },
-          "runtimeIdentifierGraphPath": "/Library/Frameworks/Mono.framework/Versions/6.12.0/lib/mono/msbuild/Current/bin/RuntimeIdentifierGraph.json"
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.15, 7.0.15]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.osx-arm64",
+              "version": "[7.0.15, 7.0.15]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.15, 7.0.15]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.101/RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -75,7 +108,7 @@
         "outputPath": "/Users/enslaver/Code/courses/pv293/cumio/src/Application/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/enslaver/.config/NuGet/NuGet.Config"
+          "/Users/enslaver/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -84,7 +117,7 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net70": {
+          "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {}
           }
@@ -96,7 +129,7 @@
         }
       },
       "frameworks": {
-        "net70": {
+        "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
@@ -132,12 +165,36 @@
               "version": "[7.0.4, )"
             }
           },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.15, 7.0.15]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.15, 7.0.15]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/Library/Frameworks/Mono.framework/Versions/6.12.0/lib/mono/msbuild/Current/bin/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.101/RuntimeIdentifierGraph.json"
         }
       }
     }
