@@ -25,4 +25,4 @@ jobs:
         run: |
           gcloud auth configure-docker europe-west3-docker.pkg.dev
           docker build -t europe-west3-docker.pkg.dev/$PROJECT_ID/cumio-api/cumio-api:latest .
-          gcloud builds submit --tag europe-west3-docker.pkg.dev/$PROJECT_ID/cumio-api
+          docker push europe-west3-docker.pkg.dev/$PROJECT_ID/cumio-api/cumio-api:latest
