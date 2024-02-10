@@ -1,0 +1,68 @@
+{
+  "version": 2,
+  "dgSpecHash": "QKtqmFbF9exoaRW4Os72ErZInt5NtJuv0pVY4cjdpYFLBkFIqTiyrWiaTTIm9dmb5JsenLfyGIYdLYqlL1X6mg==",
+  "success": false,
+  "projectFilePath": "/Users/enslaver/Code/courses/pv293/cumio/src/Application/Application.csproj",
+  "expectedPackageFiles": [
+    "/Users/enslaver/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.0/automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
+    "/Users/enslaver/.nuget/packages/csvhelper/15.0.10/csvhelper.15.0.10.nupkg.sha512",
+    "/Users/enslaver/.nuget/packages/fluentvalidation/11.2.2/fluentvalidation.11.2.2.nupkg.sha512",
+    "/Users/enslaver/.nuget/packages/fluentvalidation.dependencyinjectionextensions/11.2.2/fluentvalidation.dependencyinjectionextensions.11.2.2.nupkg.sha512",
+    "/Users/enslaver/.nuget/packages/mediatr.extensions.microsoft.dependencyinjection/11.0.0/mediatr.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
+    "/Users/enslaver/.nuget/packages/microsoft.bcl.asyncinterfaces/1.1.0/microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
+    "/Users/enslaver/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",
+    "/Users/enslaver/.nuget/packages/microsoft.entityframeworkcore/7.0.4/microsoft.entityframeworkcore.7.0.4.nupkg.sha512",
+    "/Users/enslaver/.nuget/packages/microsoft.entityframeworkcore.inmemory/7.0.4/microsoft.entityframeworkcore.inmemory.7.0.4.nupkg.sha512",
+    "/Users/enslaver/.nuget/packages/microsoft.entityframeworkcore.sqlserver/7.0.4/microsoft.entityframeworkcore.sqlserver.7.0.4.nupkg.sha512",
+    "/Users/enslaver/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/2.1.0/microsoft.extensions.dependencyinjection.abstractions.2.1.0.nupkg.sha512",
+    "/Users/enslaver/.nuget/packages/system.runtime.compilerservices.unsafe/4.5.2/system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+    "/Users/enslaver/.nuget/packages/system.threading.tasks.extensions/4.5.2/system.threading.tasks.extensions.4.5.2.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1202",
+      "level": "Error",
+      "message": "Package AutoMapper.Extensions.Microsoft.DependencyInjection 12.0.0 is not compatible with net70 (.NETFramework,Version=v7.0). Package AutoMapper.Extensions.Microsoft.DependencyInjection 12.0.0 supports: netstandard2.1 (.NETStandard,Version=v2.1)",
+      "libraryId": "AutoMapper.Extensions.Microsoft.DependencyInjection",
+      "targetGraphs": [
+        ".NETFramework,Version=v7.0"
+      ]
+    },
+    {
+      "code": "NU1202",
+      "level": "Error",
+      "message": "Package MediatR.Extensions.Microsoft.DependencyInjection 11.0.0 is not compatible with net70 (.NETFramework,Version=v7.0). Package MediatR.Extensions.Microsoft.DependencyInjection 11.0.0 supports: netstandard2.1 (.NETStandard,Version=v2.1)",
+      "libraryId": "MediatR.Extensions.Microsoft.DependencyInjection",
+      "targetGraphs": [
+        ".NETFramework,Version=v7.0"
+      ]
+    },
+    {
+      "code": "NU1202",
+      "level": "Error",
+      "message": "Package Microsoft.EntityFrameworkCore 7.0.4 is not compatible with net70 (.NETFramework,Version=v7.0). Package Microsoft.EntityFrameworkCore 7.0.4 supports: net6.0 (.NETCoreApp,Version=v6.0)",
+      "libraryId": "Microsoft.EntityFrameworkCore",
+      "targetGraphs": [
+        ".NETFramework,Version=v7.0"
+      ]
+    },
+    {
+      "code": "NU1202",
+      "level": "Error",
+      "message": "Package Microsoft.EntityFrameworkCore.InMemory 7.0.4 is not compatible with net70 (.NETFramework,Version=v7.0). Package Microsoft.EntityFrameworkCore.InMemory 7.0.4 supports: net6.0 (.NETCoreApp,Version=v6.0)",
+      "libraryId": "Microsoft.EntityFrameworkCore.InMemory",
+      "targetGraphs": [
+        ".NETFramework,Version=v7.0"
+      ]
+    },
+    {
+      "code": "NU1202",
+      "level": "Error",
+      "message": "Package Microsoft.EntityFrameworkCore.SqlServer 7.0.4 is not compatible with net70 (.NETFramework,Version=v7.0). Package Microsoft.EntityFrameworkCore.SqlServer 7.0.4 supports: net6.0 (.NETCoreApp,Version=v6.0)",
+      "libraryId": "Microsoft.EntityFrameworkCore.SqlServer",
+      "targetGraphs": [
+        ".NETFramework,Version=v7.0"
+      ]
+    }
+  ]
+}
