@@ -13,9 +13,9 @@ the most relevant service.
 
 ## Simple
 
-This design should be sufficient for 1 000 active users.
+This design should be sufficient for **1 000** active users.
 
-Estimate: USD 1,149.73 / month
+Estimate: **USD 1,149.73** / month
 
 [GCP Calculation link](https://cloud.google.com/products/calculator/#id=eafbad59-ee75-4f6f-8e0d-360d62df136c)
 
@@ -23,9 +23,9 @@ Estimate: USD 1,149.73 / month
 
 ## Advanced
 
-This design should be sufficient for 10 000 active users.
+This design should be sufficient for **10 000** active users.
 
-Estimate: USD 5,806.43 / month
+Estimate: **USD 5,806.43** / month
 
 [GCP Calculation link](https://cloud.google.com/products/calculator/#id=3bff0407-2ef2-4a96-b0d0-c2000be1902f)
 
@@ -33,9 +33,9 @@ Estimate: USD 5,806.43 / month
 
 ## Complex
 
-This design should be sufficient for 1 000 000 active users.
+This design should be sufficient for **1 000 000** active users.
 
-Estimate: USD 17,015.49 / month
+Estimate: **USD 17,015.49** / month
 
 [GCP Calculation link](https://cloud.google.com/products/calculator/#id=3a6eae04-2090-4947-9c0d-eb3726490050)
 
