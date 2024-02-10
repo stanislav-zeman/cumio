@@ -2,10 +2,8 @@ name: Push to Artifact Registry
 
 on:
   workflow_run:
-    workflows:
-      - Build
-    types:
-      - completed
+    workflows: [Build]
+    types: [completed]
 
 jobs:
   push_to_registry:
