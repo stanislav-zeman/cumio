@@ -1,5 +1,6 @@
 ﻿services:
   api:
+    image: cumio-api
     build: .
     ports:
       - "8080:8080"
