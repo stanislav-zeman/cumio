@@ -1,4 +1,5 @@
 name: Push to Artifact Registry
+on: push
 
 env:
     PROJECT_ID: "cumio-413912"
