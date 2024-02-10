@@ -1,0 +1,23 @@
+name: K6 tests
+on: push
+
+jobs:
+  runner-job:
+    runs-on: ubuntu-latest
+
+    services:
+      quickpizza:
+        image: ghcr.io/grafana/quickpizza-local:0.4.0
+        ports:
+          - 8080:8080
+          
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+  
+      - name: Run local k6 test
+        uses: grafana/k6-action@v0.3.1
+        with:
+          filename: test/k6-api.js
+        env:
+          BASE_URL: "http://quickpizza:3333"
