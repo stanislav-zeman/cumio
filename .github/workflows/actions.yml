@@ -13,7 +13,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
@@ -37,7 +38,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check out code
+      - name: Checkout
         uses: actions/checkout@v4
 
       - id: 'auth'
@@ -57,7 +58,6 @@ jobs:
       - name: Load image
         run: |
           docker load --input /tmp/cumio-api.tar
-          docker image ls -a
 
       - name: Tag and push the Docker image
         run: |
@@ -71,7 +71,7 @@ jobs:
 
     services:
       cumio-api:
-        image: ghcr.io/grafana/quickpizza-local:0.4.0
+        image: europe-west3-docker.pkg.dev/cumio-413912/cumio-api/cumio-api:latest
         ports:
           - 8080:8080
           
@@ -79,6 +79,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
   
+      - id: 'auth'
+        uses: 'google-github-actions/auth@v1'
+        with:
+          credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
+ 
       - name: Run K6 tests
         uses: grafana/k6-action@v0.3.1
         with:
