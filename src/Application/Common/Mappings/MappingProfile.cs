@@ -1,8 +1,7 @@
 ﻿using System.Reflection;
-
 using AutoMapper;
 
-namespace VerticalSliceArchitecture.Application.Common.Mappings;
+namespace Cumio.Application.Common.Mappings;
 
 public class MappingProfile : Profile
 {

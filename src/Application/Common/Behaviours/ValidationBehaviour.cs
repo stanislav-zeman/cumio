@@ -1,10 +1,8 @@
 ﻿using FluentValidation;
-
 using MediatR;
+using ValidationException = Cumio.Application.Common.Exceptions.ValidationException;
 
-using ValidationException = VerticalSliceArchitecture.Application.Common.Exceptions.ValidationException;
-
-namespace VerticalSliceArchitecture.Application.Common.Behaviours;
+namespace Cumio.Application.Common.Behaviours;
 
 public class ValidationBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
     where TRequest : IRequest<TResponse>

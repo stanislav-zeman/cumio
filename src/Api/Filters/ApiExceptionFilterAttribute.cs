@@ -1,9 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Cumio.Application.Common.Exceptions;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
-using VerticalSliceArchitecture.Application.Common.Exceptions;
-
-namespace VerticalSliceArchitecture.Api.Filters;
+namespace Cumio.Api.Filters;
 
 public class ApiExceptionFilterAttribute : ExceptionFilterAttribute
 {

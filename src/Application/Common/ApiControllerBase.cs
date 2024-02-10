@@ -1,9 +1,8 @@
 using MediatR;
-
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace VerticalSliceArchitecture.Application.Common;
+namespace Cumio.Application.Common;
 
 [ApiController]
 [Route("api/[controller]")]

@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 
-namespace VerticalSliceArchitecture.Api;
+namespace Cumio.Api;
 
 public class ErrorController : ControllerBase
 {

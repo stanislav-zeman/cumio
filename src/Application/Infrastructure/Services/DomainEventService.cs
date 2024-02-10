@@ -1,12 +1,10 @@
-﻿using MediatR;
-
+﻿using Cumio.Application.Common;
+using Cumio.Application.Common.Interfaces;
+using Cumio.Application.Common.Models;
+using MediatR;
 using Microsoft.Extensions.Logging;
 
-using VerticalSliceArchitecture.Application.Common;
-using VerticalSliceArchitecture.Application.Common.Interfaces;
-using VerticalSliceArchitecture.Application.Common.Models;
-
-namespace VerticalSliceArchitecture.Application.Infrastructure.Services;
+namespace Cumio.Application.Infrastructure.Services;
 
 public class DomainEventService : IDomainEventService
 {

@@ -1,11 +1,9 @@
 ﻿using System.Reflection;
-
+using Cumio.Application.Common.Interfaces;
+using Cumio.Application.Common.Security;
 using MediatR;
 
-using VerticalSliceArchitecture.Application.Common.Interfaces;
-using VerticalSliceArchitecture.Application.Common.Security;
-
-namespace VerticalSliceArchitecture.Application.Common.Behaviours;
+namespace Cumio.Application.Common.Behaviours;
 
 public class AuthorizationBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
     where TRequest : IRequest<TResponse>

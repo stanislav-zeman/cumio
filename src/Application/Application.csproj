@@ -1,15 +1,19 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
-    <RootNamespace>VerticalSliceArchitecture.Application</RootNamespace>
-    <AssemblyName>VerticalSliceArchitecture.Application</AssemblyName>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>Cumio.Application</RootNamespace>
+    <AssemblyName>Cumio.Application</AssemblyName>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     
     <AnalysisLevel>7-minimal</AnalysisLevel>
     <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
     <CodeAnalysisTreatWarningsAsErrors>false</CodeAnalysisTreatWarningsAsErrors>
+    <PackageId>Cumio.Application</PackageId>
+    <Authors>Cumio.Application</Authors>
+    <Company>Cumio.Application</Company>
+    <Product>Cumio.Application</Product>
   </PropertyGroup>
 
   <!-- Workaround for https://github.com/dotnet/roslyn/issues/41640 -->

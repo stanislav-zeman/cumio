@@ -1,7 +1,7 @@
-﻿using VerticalSliceArchitecture.Application.Domain.Todos;
-using VerticalSliceArchitecture.Application.Domain.ValueObjects;
+﻿using Cumio.Application.Domain.Todos;
+using Cumio.Application.Domain.ValueObjects;
 
-namespace VerticalSliceArchitecture.Application.Infrastructure.Persistence;
+namespace Cumio.Application.Infrastructure.Persistence;
 
 public static class ApplicationDbContextSeed
 {

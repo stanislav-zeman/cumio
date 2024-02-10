@@ -1,4 +1,4 @@
-﻿namespace VerticalSliceArchitecture.Application.Common.Models;
+﻿namespace Cumio.Application.Common.Models;
 
 public class Result
 {

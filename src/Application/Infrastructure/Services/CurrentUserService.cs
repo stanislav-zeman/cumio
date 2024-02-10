@@ -1,10 +1,8 @@
 using System.Security.Claims;
-
+using Cumio.Application.Common.Interfaces;
 using Microsoft.AspNetCore.Http;
 
-using VerticalSliceArchitecture.Application.Common.Interfaces;
-
-namespace VerticalSliceArchitecture.Application.Infrastructure.Services;
+namespace Cumio.Application.Infrastructure.Services;
 
 public class CurrentUserService : ICurrentUserService
 {

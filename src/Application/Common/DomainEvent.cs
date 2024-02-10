@@ -1,4 +1,4 @@
-﻿namespace VerticalSliceArchitecture.Application.Common;
+﻿namespace Cumio.Application.Common;
 
 public interface IHasDomainEvent
 {

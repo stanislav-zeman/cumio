@@ -1,7 +1,7 @@
-﻿using VerticalSliceArchitecture.Application.Common;
-using VerticalSliceArchitecture.Application.Common.Mappings;
+﻿using Cumio.Application.Common;
+using Cumio.Application.Common.Mappings;
 
-namespace VerticalSliceArchitecture.Application.Domain.Todos;
+namespace Cumio.Application.Domain.Todos;
 
 public class TodoItem : AuditableEntity, IHasDomainEvent
 {

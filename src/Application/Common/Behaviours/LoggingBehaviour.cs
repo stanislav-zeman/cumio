@@ -1,10 +1,8 @@
-﻿using MediatR.Pipeline;
-
+﻿using Cumio.Application.Common.Interfaces;
+using MediatR.Pipeline;
 using Microsoft.Extensions.Logging;
 
-using VerticalSliceArchitecture.Application.Common.Interfaces;
-
-namespace VerticalSliceArchitecture.Application.Common.Behaviours;
+namespace Cumio.Application.Common.Behaviours;
 
 public class LoggingBehaviour<TRequest> : IRequestPreProcessor<TRequest> where TRequest : notnull
 {

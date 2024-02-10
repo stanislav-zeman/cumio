@@ -1,10 +1,8 @@
 ﻿using System.Globalization;
-
 using CsvHelper.Configuration;
+using Cumio.Application.Domain.Todos;
 
-using VerticalSliceArchitecture.Application.Domain.Todos;
-
-namespace VerticalSliceArchitecture.Application.Infrastructure.Files.Maps;
+namespace Cumio.Application.Infrastructure.Files.Maps;
 
 public class TodoItemRecordMap : ClassMap<TodoItemRecord>
 {

@@ -1,6 +1,6 @@
-﻿using VerticalSliceArchitecture.Application.Common.Interfaces;
+﻿using Cumio.Application.Common.Interfaces;
 
-namespace VerticalSliceArchitecture.Application.Infrastructure.Services;
+namespace Cumio.Application.Infrastructure.Services;
 
 public class DateTimeService : IDateTime
 {

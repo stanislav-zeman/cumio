@@ -1,4 +1,4 @@
-﻿namespace VerticalSliceArchitecture.Application.Common.Exceptions;
+﻿namespace Cumio.Application.Common.Exceptions;
 
 public class NotFoundException : Exception
 {
