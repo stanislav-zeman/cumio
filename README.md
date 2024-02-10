@@ -1,3 +1,5 @@
+![Cumio API CI](https://github.com/stanislav-zeman/cumio/actions/workflows/actions.yml)
+
 # CUMIO
 
 Cumio is audio streaming platform.
