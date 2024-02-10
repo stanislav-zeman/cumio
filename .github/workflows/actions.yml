@@ -84,9 +84,12 @@ jobs:
       - name: Docker ps
         run: docker ps
 
+      - name: cURL container
+        run: curl http://localhost:8080/index.html | exit 0
+
       - name: Run K6 tests
         uses: grafana/k6-action@v0.3.1
         with:
           filename: tests/k6-api.js
         env:
-          BASE_URL: "http://localhost:8080"
+          BASE_URL: "http://0.0.0.0:8080"
