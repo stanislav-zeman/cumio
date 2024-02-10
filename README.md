@@ -1,4 +1,4 @@
-![Cumio API CI](https://github.com/stanislav-zeman/cumio/actions/workflows/actions.yml)
+![Cumio API](https://github.com/stanislav-zeman/cumio/actions/workflows/actions.yml/badge.svg)
 
 # CUMIO
 
