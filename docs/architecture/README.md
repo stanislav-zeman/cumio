@@ -5,6 +5,7 @@ This directory contains all materials related to the design of the architecture.
 For designing the infrastucture of the system the Google Cloud Platform was selected.
 
 All of the solutions described bellow include a GCP Cloud DNS and Cloud Load Balancer.
+Additionally, all the code is tested and build via GitHub Actions and the artifacts and sent to GCP Artifact Registry.
 
 The DNS directs clients to the Load Balancer which is used as a proxy for the systems services.
 Depending on the specific path, traffic, services usage and availibility, the client gets routed to
