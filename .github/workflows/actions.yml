@@ -48,7 +48,7 @@ jobs:
         run: docker load --input /tmp/cumio-api.tar
 
       - name: Run container
-        run: docker run -d -p 8080:8080 cumio-api:latest
+        run: docker compose up -d
 
       - name: Docker ps
         run: docker ps
