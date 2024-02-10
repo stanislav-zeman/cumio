@@ -56,8 +56,7 @@ jobs:
           path: /tmp
 
       - name: Load image
-        run: |
-          docker load --input /tmp/cumio-api.tar
+        run: docker load --input /tmp/cumio-api.tar
 
       - name: Tag and push the Docker image
         run: |
@@ -69,24 +68,27 @@ jobs:
     needs: push
     runs-on: ubuntu-latest
 
-    services:
-      cumio-api:
-        image: europe-west3-docker.pkg.dev/cumio-413912/cumio-api/cumio-api:latest
-        ports:
-          - 8080:8080
-          
     steps:
       - name: Checkout
         uses: actions/checkout@v4
   
-      - id: 'auth'
-        uses: 'google-github-actions/auth@v1'
+      - name: Download artifact
+        uses: actions/download-artifact@v4
         with:
-          credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
- 
+          name: cumio-api
+          path: /tmp
+
+      - name: Load image
+        run: docker load --input /tmp/cumio-api.tar
+
+      - uses: addnab/docker-run-action@v3
+        with:
+          image: cumio-api:latest
+          options: -p 8080:8080
+
       - name: Run K6 tests
         uses: grafana/k6-action@v0.3.1
         with:
           filename: tests/k6-api.js
         env:
-          BASE_URL: "http://cumio-api:8080"
+          BASE_URL: "http://localhost:8080"
