@@ -65,6 +65,6 @@ jobs:
       - name: Run K6 tests
         uses: grafana/k6-action@v0.3.1
         with:
-          filename: test/k6-api.js
+          filename: tests/k6-api.js
         env:
           BASE_URL: "http://cumio-api:8080"
