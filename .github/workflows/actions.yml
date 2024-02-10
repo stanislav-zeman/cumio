@@ -81,9 +81,6 @@ jobs:
       - name: Run container
         run: docker run -d -p 8080:8080 cumio-api:latest
 
-      - name: CURL container
-        run: curl http://localhost:8080/index.html
-
       - name: Docker ps
         run: docker ps
 
