@@ -30,6 +30,7 @@ jobs:
         with:
           name: cumio-api
           path: /tmp/cumio-api.tar
+          retention-days: 3
 
   push:
     needs: build
