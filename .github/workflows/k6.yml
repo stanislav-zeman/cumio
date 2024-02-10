@@ -1,5 +1,11 @@
 name: K6 tests
-on: push
+
+on:
+  workflow_run:
+    workflows:
+      - Push to Artifact Registry
+    types:
+      - completed
 
 jobs:
   runner-job:
