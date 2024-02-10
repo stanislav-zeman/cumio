@@ -25,7 +25,7 @@ Estimate: **USD 1,149.73** / month
 
 This design should be sufficient for **10 000** active users.
 
-Estimate: **USD 5,806.43** / month
+Estimate: **USD 8,024.03** / month
 
 [GCP Calculation link](https://cloud.google.com/products/calculator/#id=3bff0407-2ef2-4a96-b0d0-c2000be1902f)
 
