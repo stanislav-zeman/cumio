@@ -27,6 +27,7 @@ jobs:
         run: dotnet build --configuration Release --no-restore
 
   push:
+    needs: build
     runs-on: ubuntu-latest
 
     steps:
@@ -48,6 +49,7 @@ jobs:
           docker push europe-west3-docker.pkg.dev/$GCP_PROJECT/cumio-api/cumio-api:latest
 
   test:
+    needs: push
     runs-on: ubuntu-latest
 
     services:
