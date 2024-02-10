@@ -1,0 +1,27 @@
+name: Push to Artifact Registry
+
+env:
+    PROJECT_ID: "cumio-413912"
+
+jobs:
+  push_to_registry:
+    name: Push Docker image to Artifact Registry
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - id: 'auth'
+        uses: 'google-github-actions/auth@v1'
+        with:
+          credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
+
+      - name: Set up GCP CLI
+        uses: 'google-github-actions/setup-gcloud@v1'
+
+      - name: Build and push the Docker image
+        run: |
+          gcloud auth configure-docker europe-west3-docker.pkg.dev
+          docker build -t europe-west3-docker.pkg.dev/$PROJECT_ID/cumio-api/cumio-api:latest .
+          gcloud builds submit --tag europe-west3-docker.pkg.dev/$PROJECT_ID/cumio-api
