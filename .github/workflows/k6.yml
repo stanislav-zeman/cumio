@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     services:
-      quickpizza:
+      cumio-api:
         image: ghcr.io/grafana/quickpizza-local:0.4.0
         ports:
           - 8080:8080
@@ -26,4 +26,4 @@ jobs:
         with:
           filename: test/k6-api.js
         env:
-          BASE_URL: "http://quickpizza:3333"
+          BASE_URL: "http://cumio-api:8080"
