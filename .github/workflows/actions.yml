@@ -54,7 +54,7 @@ jobs:
         run: docker ps
 
       - name: cURL container
-        run: curl http://localhost:8080/index.html | curl https://localhost:8080/index.html | exit 0
+        run: curl -I http://localhost:8080/index.html | curl -I https://localhost:8080/index.html | exit 0
 
       - name: Run K6 tests
         uses: grafana/k6-action@v0.3.1
