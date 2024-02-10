@@ -82,11 +82,7 @@ jobs:
         run: docker load --input /tmp/cumio-api.tar
 
       - name: Run container
-        uses: addnab/docker-run-action@v3
-        with:
-          image: cumio-api:latest
-          options: -d -p 8080:8080
-          run: /work/run-script
+        run: docker run -p 8080:8080 cumio-api:latest
 
       - name: Run K6 tests
         uses: grafana/k6-action@v0.3.1
