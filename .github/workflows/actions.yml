@@ -10,7 +10,6 @@ env:
 
 jobs:
   build:
-    name: build
     runs-on: ubuntu-latest
 
     steps:
@@ -28,7 +27,6 @@ jobs:
         run: dotnet build --configuration Release --no-restore
 
   push:
-    name: Push Docker image to Artifact Registry
     runs-on: ubuntu-latest
 
     steps:
