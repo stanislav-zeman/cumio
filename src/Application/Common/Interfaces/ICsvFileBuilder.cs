@@ -1,6 +1,6 @@
-﻿using VerticalSliceArchitecture.Application.Domain.Todos;
+﻿using Cumio.Application.Domain.Todos;
 
-namespace VerticalSliceArchitecture.Application.Common.Interfaces;
+namespace Cumio.Application.Common.Interfaces;
 
 public interface ICsvFileBuilder
 {

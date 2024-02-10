@@ -1,12 +1,9 @@
 ﻿using System.Diagnostics;
-
+using Cumio.Application.Common.Interfaces;
 using MediatR;
-
 using Microsoft.Extensions.Logging;
 
-using VerticalSliceArchitecture.Application.Common.Interfaces;
-
-namespace VerticalSliceArchitecture.Application.Common.Behaviours;
+namespace Cumio.Application.Common.Behaviours;
 
 public class PerformanceBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> where TRequest : IRequest<TResponse>
 {

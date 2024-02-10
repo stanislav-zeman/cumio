@@ -1,11 +1,9 @@
-﻿using MediatR;
-
+﻿using Cumio.Application.Common.Models;
+using Cumio.Application.Domain.Todos;
+using MediatR;
 using Microsoft.Extensions.Logging;
 
-using VerticalSliceArchitecture.Application.Common.Models;
-using VerticalSliceArchitecture.Application.Domain.Todos;
-
-namespace VerticalSliceArchitecture.Application.Features.TodoItems.EventHandlers;
+namespace Cumio.Application.Features.TodoItems.EventHandlers;
 
 public class TodoItemCompletedEventHandler : INotificationHandler<DomainEventNotification<TodoItemCompletedEvent>>
 {

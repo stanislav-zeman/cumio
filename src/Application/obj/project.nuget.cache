@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "4+ZrOOx0WQ9U4lMmyPHzDT96PuTae3bIcGa7qLI3M8jjwxp6vfdDKbI1MFqEikL11X0PsUowm4pzvlyHMOzDdA==",
+  "dgSpecHash": "ONWyCOHsGVjJlhHl6lwyx4bn88TzMgvL3AMq3/ex1r1iTZ0MEp5+TQK+4cHwDiOc/K7+1YLD6+aWE4xltRBDJQ==",
   "success": true,
   "projectFilePath": "/Users/enslaver/Code/courses/pv293/cumio/src/Application/Application.csproj",
   "expectedPackageFiles": [
@@ -73,9 +73,7 @@
     "/Users/enslaver/.nuget/packages/system.text.json/4.7.2/system.text.json.4.7.2.nupkg.sha512",
     "/Users/enslaver/.nuget/packages/system.threading.tasks/4.3.0/system.threading.tasks.4.3.0.nupkg.sha512",
     "/Users/enslaver/.nuget/packages/system.threading.tasks.extensions/4.5.4/system.threading.tasks.extensions.4.5.4.nupkg.sha512",
-    "/Users/enslaver/.nuget/packages/system.windows.extensions/5.0.0/system.windows.extensions.5.0.0.nupkg.sha512",
-    "/Users/enslaver/.nuget/packages/microsoft.netcore.app.ref/7.0.15/microsoft.netcore.app.ref.7.0.15.nupkg.sha512",
-    "/Users/enslaver/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.15/microsoft.aspnetcore.app.ref.7.0.15.nupkg.sha512"
+    "/Users/enslaver/.nuget/packages/system.windows.extensions/5.0.0/system.windows.extensions.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }

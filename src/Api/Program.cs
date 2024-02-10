@@ -1,6 +1,5 @@
+using Cumio.Application;
 using Microsoft.OpenApi.Models;
-
-using VerticalSliceArchitecture.Application;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -57,4 +56,7 @@ app.MapControllers();
 
 app.Run();
 
-public partial class Program { }
+namespace Cumio.Api
+{
+    public partial class Program { }
+}

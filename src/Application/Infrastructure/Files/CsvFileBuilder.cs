@@ -1,12 +1,10 @@
 ﻿using System.Globalization;
-
 using CsvHelper;
+using Cumio.Application.Common.Interfaces;
+using Cumio.Application.Domain.Todos;
+using Cumio.Application.Infrastructure.Files.Maps;
 
-using VerticalSliceArchitecture.Application.Common.Interfaces;
-using VerticalSliceArchitecture.Application.Domain.Todos;
-using VerticalSliceArchitecture.Application.Infrastructure.Files.Maps;
-
-namespace VerticalSliceArchitecture.Application.Infrastructure.Files;
+namespace Cumio.Application.Infrastructure.Files;
 
 public class CsvFileBuilder : ICsvFileBuilder
 {

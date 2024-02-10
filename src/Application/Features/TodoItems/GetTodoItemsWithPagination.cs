@@ -1,19 +1,15 @@
 ﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
-
+using Cumio.Application.Common;
+using Cumio.Application.Common.Mappings;
+using Cumio.Application.Common.Models;
+using Cumio.Application.Domain.Todos;
+using Cumio.Application.Infrastructure.Persistence;
 using FluentValidation;
-
 using MediatR;
-
 using Microsoft.AspNetCore.Mvc;
 
-using VerticalSliceArchitecture.Application.Common;
-using VerticalSliceArchitecture.Application.Common.Mappings;
-using VerticalSliceArchitecture.Application.Common.Models;
-using VerticalSliceArchitecture.Application.Domain.Todos;
-using VerticalSliceArchitecture.Application.Infrastructure.Persistence;
-
-namespace VerticalSliceArchitecture.Application.Features.TodoItems;
+namespace Cumio.Application.Features.TodoItems;
 
 public class GetTodoItemsWithPaginationController : ApiControllerBase
 {

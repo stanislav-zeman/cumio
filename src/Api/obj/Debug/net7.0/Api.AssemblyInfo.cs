@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VerticalSliceArchitecture.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6a40d750f54ad6be770b96ad3965458c1692d55a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5508c1cb17f4ab0c17b23b0c45f9e2a875487c6c")]
 [assembly: System.Reflection.AssemblyProductAttribute("VerticalSliceArchitecture.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VerticalSliceArchitecture.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

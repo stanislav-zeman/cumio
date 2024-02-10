@@ -1,11 +1,9 @@
 ﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
-
+using Cumio.Application.Common.Models;
 using Microsoft.EntityFrameworkCore;
 
-using VerticalSliceArchitecture.Application.Common.Models;
-
-namespace VerticalSliceArchitecture.Application.Common.Mappings;
+namespace Cumio.Application.Common.Mappings;
 
 public static class MappingExtensions
 {

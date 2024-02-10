@@ -1,7 +1,7 @@
-﻿using VerticalSliceArchitecture.Application.Common;
-using VerticalSliceArchitecture.Application.Common.Exceptions;
+﻿using Cumio.Application.Common;
+using Cumio.Application.Common.Exceptions;
 
-namespace VerticalSliceArchitecture.Application.Domain.ValueObjects;
+namespace Cumio.Application.Domain.ValueObjects;
 
 public class Colour : ValueObject
 {

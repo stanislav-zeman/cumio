@@ -1,14 +1,12 @@
-﻿using MediatR;
-
+﻿using Cumio.Application.Common;
+using Cumio.Application.Common.Exceptions;
+using Cumio.Application.Domain.Todos;
+using Cumio.Application.Infrastructure.Persistence;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-using VerticalSliceArchitecture.Application.Common;
-using VerticalSliceArchitecture.Application.Common.Exceptions;
-using VerticalSliceArchitecture.Application.Domain.Todos;
-using VerticalSliceArchitecture.Application.Infrastructure.Persistence;
-
-namespace VerticalSliceArchitecture.Application.Features.TodoLists;
+namespace Cumio.Application.Features.TodoLists;
 
 public class DeleteTodoListController : ApiControllerBase
 {

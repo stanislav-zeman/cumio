@@ -1,9 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Cumio.Application.Domain.Todos;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-using VerticalSliceArchitecture.Application.Domain.Todos;
-
-namespace VerticalSliceArchitecture.Application.Infrastructure.Persistence.Configurations;
+namespace Cumio.Application.Infrastructure.Persistence.Configurations;
 
 public class TodoListConfiguration : IEntityTypeConfiguration<TodoList>
 {

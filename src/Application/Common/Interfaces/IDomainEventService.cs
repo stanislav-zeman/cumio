@@ -1,4 +1,4 @@
-﻿namespace VerticalSliceArchitecture.Application.Common.Interfaces;
+﻿namespace Cumio.Application.Common.Interfaces;
 
 public interface IDomainEventService
 {

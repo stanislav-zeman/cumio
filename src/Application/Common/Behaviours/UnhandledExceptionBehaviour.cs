@@ -1,8 +1,7 @@
 ﻿using MediatR;
-
 using Microsoft.Extensions.Logging;
 
-namespace VerticalSliceArchitecture.Application.Common.Behaviours;
+namespace Cumio.Application.Common.Behaviours;
 
 public class UnhandledExceptionBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> where TRequest : IRequest<TResponse>
 {

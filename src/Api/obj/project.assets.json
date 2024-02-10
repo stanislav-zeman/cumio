@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net7.0": {
+    "net8.0": {
       "AutoMapper/12.0.0": {
         "type": "package",
         "dependencies": {
@@ -1451,9 +1451,9 @@
           }
         }
       },
-      "VerticalSliceArchitecture.Application/1.0.0": {
+      "Cumio.Application/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
+        "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0",
           "CsvHelper": "15.0.10",
@@ -1465,10 +1465,10 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.4"
         },
         "compile": {
-          "bin/placeholder/VerticalSliceArchitecture.Application.dll": {}
+          "bin/placeholder/Cumio.Application.dll": {}
         },
         "runtime": {
-          "bin/placeholder/VerticalSliceArchitecture.Application.dll": {}
+          "bin/placeholder/Cumio.Application.dll": {}
         },
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
@@ -4167,19 +4167,19 @@
         "version.txt"
       ]
     },
-    "VerticalSliceArchitecture.Application/1.0.0": {
+    "Cumio.Application/1.0.0": {
       "type": "project",
       "path": "../Application/Application.csproj",
       "msbuildProject": "../Application/Application.csproj"
     }
   },
   "projectFileDependencyGroups": {
-    "net7.0": [
+    "net8.0": [
+      "Cumio.Application >= 1.0.0",
       "FluentValidation.AspNetCore >= 11.2.2",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.4",
       "Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore >= 7.0.4",
-      "Swashbuckle.AspNetCore >= 6.2.3",
-      "VerticalSliceArchitecture.Application >= 1.0.0"
+      "Swashbuckle.AspNetCore >= 6.2.3"
     ]
   },
   "packageFolders": {
@@ -4189,7 +4189,7 @@
     "version": "1.0.0",
     "restore": {
       "projectUniqueName": "/Users/enslaver/Code/courses/pv293/cumio/src/Api/Api.csproj",
-      "projectName": "VerticalSliceArchitecture.Api",
+      "projectName": "Cumio.Api",
       "projectPath": "/Users/enslaver/Code/courses/pv293/cumio/src/Api/Api.csproj",
       "packagesPath": "/Users/enslaver/.nuget/packages/",
       "outputPath": "/Users/enslaver/Code/courses/pv293/cumio/src/Api/obj/",
@@ -4198,14 +4198,14 @@
         "/Users/enslaver/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
-        "net7.0"
+        "net8.0"
       ],
       "sources": {
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net7.0": {
-          "targetAlias": "net7.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "projectReferences": {
             "/Users/enslaver/Code/courses/pv293/cumio/src/Application/Application.csproj": {
               "projectPath": "/Users/enslaver/Code/courses/pv293/cumio/src/Application/Application.csproj"
@@ -4220,8 +4220,8 @@
       }
     },
     "frameworks": {
-      "net7.0": {
-        "targetAlias": "net7.0",
+      "net8.0": {
+        "targetAlias": "net8.0",
         "dependencies": {
           "FluentValidation.AspNetCore": {
             "target": "Package",
@@ -4253,20 +4253,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[7.0.15, 7.0.15]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.osx-arm64",
-            "version": "[7.0.15, 7.0.15]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[7.0.15, 7.0.15]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -4275,7 +4261,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.101/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,20 +1,16 @@
 ﻿using System.Reflection;
-
+using Cumio.Application.Common.Behaviours;
+using Cumio.Application.Common.Interfaces;
+using Cumio.Application.Infrastructure.Files;
+using Cumio.Application.Infrastructure.Persistence;
+using Cumio.Application.Infrastructure.Services;
 using FluentValidation;
-
 using MediatR;
-
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-using VerticalSliceArchitecture.Application.Common.Behaviours;
-using VerticalSliceArchitecture.Application.Common.Interfaces;
-using VerticalSliceArchitecture.Application.Infrastructure.Files;
-using VerticalSliceArchitecture.Application.Infrastructure.Persistence;
-using VerticalSliceArchitecture.Application.Infrastructure.Services;
-
-namespace VerticalSliceArchitecture.Application;
+namespace Cumio.Application;
 
 public static class DependencyInjection
 {

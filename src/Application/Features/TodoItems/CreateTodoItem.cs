@@ -1,14 +1,11 @@
-﻿using FluentValidation;
-
+﻿using Cumio.Application.Common;
+using Cumio.Application.Domain.Todos;
+using Cumio.Application.Infrastructure.Persistence;
+using FluentValidation;
 using MediatR;
-
 using Microsoft.AspNetCore.Mvc;
 
-using VerticalSliceArchitecture.Application.Common;
-using VerticalSliceArchitecture.Application.Domain.Todos;
-using VerticalSliceArchitecture.Application.Infrastructure.Persistence;
-
-namespace VerticalSliceArchitecture.Application.Features.TodoItems;
+namespace Cumio.Application.Features.TodoItems;
 
 public class CreateTodoItemController : ApiControllerBase
 {

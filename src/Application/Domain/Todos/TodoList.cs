@@ -1,7 +1,7 @@
-﻿using VerticalSliceArchitecture.Application.Common;
-using VerticalSliceArchitecture.Application.Domain.ValueObjects;
+﻿using Cumio.Application.Common;
+using Cumio.Application.Domain.ValueObjects;
 
-namespace VerticalSliceArchitecture.Application.Domain.Todos;
+namespace Cumio.Application.Domain.Todos;
 
 public class TodoList : AuditableEntity
 {
