@@ -48,24 +48,15 @@ jobs:
         run: docker load --input /tmp/cumio-api.tar
 
       - name: Run container
-        run: |
-          docker compose up -d
-          sleep 5
-          curl -I http://localhost:8080/index.html | exit 0
-          curl -I https://localhost:8080/index.html | exit 0
-          curl -I http://0.0.0.0:8080/index.html | exit 0
-          curl -I localhost:8080/index.html | exit 0
-          curl -I http://127.0.0.1:8080/index.html | exit 0 
-          curl -I http://cumio-api:8080/index.html | exit 0
+        run: docker compose up -d
 
       - name: Docker ps
         run: docker ps
 
-      - name: Test using container
-        run: docker run --rm -i --network cumio_backend grafana/k6 run - <tests/k6-api.js
-
       - name: Run K6 tests
-        uses: grafana/k6-action@v0.3.1
+        run: docker run --rm -i -v "${{ github.workspace }}:/output" --network cumio_backend grafana/k6 run --out json=/output/results.json - <tests/k6-api.js
+
+      - uses: grafana/k6-action@v0.3.1
         with:
           filename: tests/k6-api.js
           flags: --out json=results.json
