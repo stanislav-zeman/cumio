@@ -6,7 +6,7 @@ export const options = {
 };
 
 const session = new Httpx({
-    baseURL:  __ENV.BASE_URL || "http://localhost:8080"
+    baseURL:  __ENV.BASE_URL || "http://api:8080"
 })
 
 export default function testSuite() {
