@@ -50,7 +50,7 @@ jobs:
       - name: Run container
         run: |
           docker compose up -d
-          curl -I http://localhost:8080/index.html | curl -I https://localhost:8080/index.html | curl -I http://0.0.0.0:8080/index.html | curl -I localhost:8080/index.html | exit 0
+          curl -I http://localhost:8080/index.html | curl -I https://localhost:8080/index.html | curl -I http://0.0.0.0:8080/index.html | curl -I localhost:8080/index.html | curl -I http://127.0.0.1:8080/index.html | exit 0
 
       - name: Docker ps
         run: docker ps
