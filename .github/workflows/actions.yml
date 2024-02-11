@@ -54,7 +54,7 @@ jobs:
         run: docker ps
 
       - name: Run K6 tests
-        run: docker run --rm -i -v "${{ github.workspace }}:/output" --network cumio_backend grafana/k6 run --out json=/output/results.json - <tests/k6-api.js
+        run: docker run --rm -i -v "${{ github.workspace }}:/home/k6" --network cumio_backend grafana/k6 run --out json=results.json - <tests/k6-api.js
 
       - uses: grafana/k6-action@v0.3.1
         with:
