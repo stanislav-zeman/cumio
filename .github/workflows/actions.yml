@@ -51,13 +51,15 @@ jobs:
         run: |
           docker compose up -d
           sleep 5
-          curl -I http://localhost:8080/index.html | curl -I https://localhost:8080/index.html | curl -I http://0.0.0.0:8080/index.html | curl -I localhost:8080/index.html | curl -I http://127.0.0.1:8080/index.html | curl -I http://api:8080/index.html | exit 0
+          curl -I http://localhost:8080/index.html | exit 0
+          curl -I https://localhost:8080/index.html | exit 0
+          curl -I http://0.0.0.0:8080/index.html | exit 0
+          curl -I localhost:8080/index.html | exit 0
+          curl -I http://127.0.0.1:8080/index.html | exit 0 
+          curl -I http://cumio-api:8080/index.html | exit 0
 
       - name: Docker ps
         run: docker ps
-
-      - name: cURL container
-        run: curl -I http://localhost:8080/index.html | curl -I https://localhost:8080/index.html | exit 0
 
       - name: Run K6 tests
         uses: grafana/k6-action@v0.3.1
@@ -65,7 +67,7 @@ jobs:
           filename: tests/k6-api.js
           flags: --out json=results.json
         env:
-          BASE_URL: "http://0.0.0.0:8080"
+          BASE_URL: "http://localhost:8080"
 
       - name: Upload K6 test results
         uses: actions/upload-artifact@v4
