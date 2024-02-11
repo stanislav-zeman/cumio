@@ -50,29 +50,8 @@ jobs:
       - name: Run container
         run: docker compose up -d
 
-      - name: Docker ps
-        run: docker ps
-
-      - name: Echoes
-        run: |
-          echo ${{ github.workspace}}
-          echo $GITHUB_WORKSPACE
-
       - name: Run K6 tests
-        run: docker run --rm -i -v "$GITHUB_WORKSPACE:/home/k6" --network cumio_backend grafana/k6 run --out json=results.json - <tests/k6-api.js
-
-      - uses: grafana/k6-action@v0.3.1
-        with:
-          filename: tests/k6-api.js
-          flags: --out json=results.json
-        env:
-          BASE_URL: "http://localhost:8080"
-
-      - name: Upload K6 test results
-        uses: actions/upload-artifact@v4
-        with:
-          name: k6-report
-          path: results.json
+        run: docker run --rm -i --network cumio_backend grafana/k6 run - <tests/k6-api.js
 
   push:
     needs: test
