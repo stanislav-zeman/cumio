@@ -1,9 +1,10 @@
 ﻿using Cumio.Application.Common;
 using Cumio.Application.Common.Mappings;
+using Cumio.Application.Domain.Common;
 
 namespace Cumio.Application.Domain.Todos;
 
-public class TodoItem : AuditableEntity, IHasDomainEvent
+public class TodoItem : BaseAuditableEntity, IHasDomainEvent
 {
     public int Id { get; set; }
 
