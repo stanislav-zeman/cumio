@@ -1,9 +1,10 @@
 ﻿using Cumio.Application.Common;
+using Cumio.Application.Domain.Common;
 using Cumio.Application.Domain.ValueObjects;
 
 namespace Cumio.Application.Domain.Todos;
 
-public class TodoList : AuditableEntity
+public class TodoList : BaseAuditableEntity
 {
     public int Id { get; set; }
 

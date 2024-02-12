@@ -1,5 +1,6 @@
 ﻿using Cumio.Application.Common;
 using Cumio.Application.Common.Exceptions;
+using Cumio.Application.Domain.Common;
 
 namespace Cumio.Application.Domain.ValueObjects;
 

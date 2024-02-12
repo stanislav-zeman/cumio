@@ -1,6 +1,7 @@
 ﻿using System.Reflection;
 using Cumio.Application.Common;
 using Cumio.Application.Common.Interfaces;
+using Cumio.Application.Domain.Common;
 using Cumio.Application.Domain.Todos;
 using Microsoft.EntityFrameworkCore;
 
@@ -29,7 +30,7 @@ public class ApplicationDbContext : DbContext
 
     public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
     {
-        foreach (var entry in ChangeTracker.Entries<AuditableEntity>())
+        foreach (var entry in ChangeTracker.Entries<BaseAuditableEntity>())
         {
             switch (entry.State)
             {
