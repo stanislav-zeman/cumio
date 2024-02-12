@@ -1,7 +1,6 @@
 ﻿using System.Reflection;
 using Cumio.Application.Common;
 using Cumio.Application.Common.Interfaces;
-using Cumio.Application.Domain.Common;
 using Cumio.Application.Domain.Todos;
 using Microsoft.EntityFrameworkCore;
 

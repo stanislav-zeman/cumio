@@ -1,6 +1,6 @@
-﻿using Cumio.Application.Common.Interfaces;
+﻿using Cumio.Application.Common;
+using Cumio.Application.Common.Interfaces;
 using Cumio.Application.Common.Models;
-using Cumio.Application.Domain.Common;
 using MediatR;
 using Microsoft.Extensions.Logging;
 

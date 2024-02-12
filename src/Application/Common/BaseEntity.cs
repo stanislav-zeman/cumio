@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Cumio.Application.Domain.Common;
+namespace Cumio.Application.Common;
 
 public abstract class BaseEntity
 {

@@ -1,5 +1,4 @@
-﻿using Cumio.Application.Domain.Common;
-using MediatR;
+﻿using MediatR;
 
 namespace Cumio.Application.Common.Models;
 

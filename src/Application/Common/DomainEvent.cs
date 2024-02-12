@@ -1,4 +1,4 @@
-﻿namespace Cumio.Application.Domain.Common;
+﻿namespace Cumio.Application.Common;
 
 public interface IHasDomainEvent
 {

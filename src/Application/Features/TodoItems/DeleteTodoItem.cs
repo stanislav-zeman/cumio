@@ -1,6 +1,5 @@
 ﻿using Cumio.Application.Common;
 using Cumio.Application.Common.Exceptions;
-using Cumio.Application.Domain.Common;
 using Cumio.Application.Domain.Todos;
 using Cumio.Application.Infrastructure.Persistence;
 using MediatR;
