@@ -16,8 +16,8 @@ The system allows users to subscribe to a specific publisher or a content creato
 
 This project repository is basen on [Vertical Slice Architecture template repository by Nadir Bad](https://github.com/nadirbad/VerticalSliceArchitecture), and reuses most of its technologies.
 
-- [ASP.NET API with .NET 7](https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-7.0)
+- [ASP.NET API with .NET 8](https://learn.microsoft.com/en-us/aspnet/core/?view=aspnetcore-8.0)
 - CQRS with [MediatR](https://github.com/jbogard/MediatR)
 - [FluentValidation](https://fluentvalidation.net/)
 - [AutoMapper](https://automapper.org/)
-- [Entity Framework Core 7](https://docs.microsoft.com/en-us/ef/core/)
+- [Entity Framework Core 8](https://docs.microsoft.com/en-us/ef/core/)
