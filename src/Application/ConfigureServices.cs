@@ -30,6 +30,9 @@ public static class DependencyInjection
 
     public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
     {
+        services.AddScoped<IUser, CurrentUser>();
+        services.AddHttpContextAccessor();
+
         if (configuration.GetValue<bool>("UseInMemoryDatabase"))
         {
             services.AddDbContext<ApplicationDbContext>(options =>
