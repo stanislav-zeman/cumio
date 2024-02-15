@@ -1,4 +1,5 @@
 using Cumio.Application.Common;
+using Cumio.Application.Domain.ValueObjects;
 
 namespace Cumio.Application.Domain.Entities;
 
@@ -8,5 +9,5 @@ public class Content : BaseAuditableEntity
 
     public string? Author { get; set; }
 
-    public string? DataUrl { get; set; }
+    public ObjectStorageLocation? DataLocation { get; set; }
 }
