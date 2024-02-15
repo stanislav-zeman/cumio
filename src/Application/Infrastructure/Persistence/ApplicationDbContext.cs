@@ -10,16 +10,14 @@ namespace Cumio.Application.Infrastructure.Persistence;
 
 public class ApplicationDbContext : IdentityDbContext<ApplicationUser>, IApplicationDbContext
 {
-    private readonly IDateTime _dateTime;
     private readonly IDomainEventService _domainEventService;
 
     public ApplicationDbContext(
         DbContextOptions<ApplicationDbContext> options,
-        IDomainEventService domainEventService,
-        IDateTime dateTime) : base(options)
+        IDomainEventService domainEventService
+        ) : base(options)
     {
         _domainEventService = domainEventService;
-        _dateTime = dateTime;
     }
 
     public DbSet<TodoList> TodoLists => Set<TodoList>();
@@ -33,27 +31,6 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>, IApplica
 
     public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
     {
-        foreach (var entry in ChangeTracker.Entries<BaseAuditableEntity>())
-        {
-            switch (entry.State)
-            {
-                case EntityState.Added:
-                    entry.Entity.Created = _dateTime.Now;
-                    break;
-                case EntityState.Modified:
-                    entry.Entity.LastModified = _dateTime.Now;
-                    break;
-                case EntityState.Detached:
-                    break;
-                case EntityState.Unchanged:
-                    break;
-                case EntityState.Deleted:
-                    break;
-                default:
-                    break;
-            }
-        }
-
         var events = ChangeTracker.Entries<IHasDomainEvent>()
                 .Select(x => x.Entity.DomainEvents)
                 .SelectMany(x => x)
