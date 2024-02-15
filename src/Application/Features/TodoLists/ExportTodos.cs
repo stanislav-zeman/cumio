@@ -46,13 +46,11 @@ internal sealed class ExportTodosQueryHandler : IRequestHandler<ExportTodosQuery
 {
     private readonly ApplicationDbContext _context;
     private readonly IMapper _mapper;
-    private readonly ICsvFileBuilder _fileBuilder;
 
-    public ExportTodosQueryHandler(ApplicationDbContext context, IMapper mapper, ICsvFileBuilder fileBuilder)
+    public ExportTodosQueryHandler(ApplicationDbContext context, IMapper mapper)
     {
         _context = context;
         _mapper = mapper;
-        _fileBuilder = fileBuilder;
     }
 
     public async Task<ExportTodosVm> Handle(ExportTodosQuery request, CancellationToken cancellationToken)
@@ -65,7 +63,7 @@ internal sealed class ExportTodosQueryHandler : IRequestHandler<ExportTodosQuery
         var vm = new ExportTodosVm(
             "TodoItems.csv",
             "text/csv",
-            _fileBuilder.BuildTodoItemsFile(records));
+            Array.Empty<byte>());
 
         return vm;
     }
