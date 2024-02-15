@@ -8,6 +8,7 @@ using Cumio.Application.Infrastructure.Persistence;
 using FluentValidation;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Cumio.Application.Features.Contents;
 
@@ -54,6 +55,7 @@ internal sealed class GetContentWithPaginationQueryHandler : IRequestHandler<Get
         return _context.Contents
             .OrderBy(x => x.Title)
             .ProjectTo<ContentDto>(_mapper.ConfigurationProvider)
+            .AsNoTracking()
             .PaginatedListAsync(request.PageNumber, request.PageSize);
     }
 }
