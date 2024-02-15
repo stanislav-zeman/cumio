@@ -52,7 +52,7 @@ jobs:
         run: docker compose -f deployments/docker-compose.yml up -d
 
       - name: Run K6 tests
-        run: docker run --rm -i --network cumio_backend grafana/k6 run - <tests/k6-api.js
+        run: docker run --rm -i --network deployments_backend grafana/k6 run - <tests/k6-api.js
 
   push:
     needs: test
