@@ -1,7 +1,6 @@
 ﻿using System.Reflection;
 using Cumio.Application.Common.Behaviours;
 using Cumio.Application.Common.Interfaces;
-using Cumio.Application.Infrastructure.Files;
 using Cumio.Application.Infrastructure.Identity;
 using Cumio.Application.Infrastructure.Persistence;
 using Cumio.Application.Infrastructure.Services;
@@ -45,9 +44,9 @@ public static class DependencyInjection
         }
 
         services.AddScoped<IDomainEventService, DomainEventService>();
+        services.AddScoped<IDomainEventService, DomainEventService>();
 
         services.AddTransient<IDateTime, DateTimeService>();
-        services.AddTransient<ICsvFileBuilder, CsvFileBuilder>();
 
         services.AddAuthentication()
             .AddBearerToken(IdentityConstants.BearerScheme);
