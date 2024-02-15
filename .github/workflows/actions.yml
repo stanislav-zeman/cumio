@@ -49,7 +49,7 @@ jobs:
         run: docker load --input /tmp/cumio-api.tar
 
       - name: Run container
-        run: docker compose up -d -f deployments/docker-compose.yml
+        run: docker compose -f deployments/docker-compose.yml up -d
 
       - name: Run K6 tests
         run: docker run --rm -i --network cumio_backend grafana/k6 run - <tests/k6-api.js
