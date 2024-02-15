@@ -3,11 +3,13 @@ using Cumio.Application.Common.Behaviours;
 using Cumio.Application.Common.Interfaces;
 using Cumio.Application.Infrastructure.Identity;
 using Cumio.Application.Infrastructure.Persistence;
+using Cumio.Application.Infrastructure.Persistence.Interceptors;
 using Cumio.Application.Infrastructure.Services;
 using FluentValidation;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -32,6 +34,9 @@ public static class DependencyInjection
     {
         services.AddScoped<IUser, CurrentUser>();
         services.AddHttpContextAccessor();
+
+        services.AddScoped<ISaveChangesInterceptor, AuditableEntityInterceptor>();
+        services.AddScoped<ISaveChangesInterceptor, DispatchDomainEventsInterceptor>();
 
         if (configuration.GetValue<bool>("UseInMemoryDatabase"))
         {
