@@ -41,7 +41,7 @@ const session = new Httpx({
     timeout: 1000, // 1s
 })
 
-const binFile = open(`./assets/test-record.mp3`)
+const pregeneratedAudioFileMock = randomString(5000000) // roughly 5min mpeg
 
 export function docs() {
     const res = session.get("/index.html");
@@ -91,7 +91,7 @@ function createContents() {
     const title = randomString(12)
     const url = `/api/contents?Title=${title}`
     const data = {
-        InputFile: http.file(binFile, `test.mp3`),
+        InputFile: http.file(pregeneratedAudioFileMock, `test.mp3`),
     }
 
     const params = {
