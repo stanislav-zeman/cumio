@@ -1,58 +1,45 @@
-﻿using System.Reflection;
-using Cumio.Application.Common;
-using Cumio.Application.Common.Interfaces;
+﻿using Cumio.Application.Common.Interfaces;
 using Cumio.Application.Domain.Entities;
 using Cumio.Application.Infrastructure.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Design;
 
 namespace Cumio.Application.Infrastructure.Persistence;
 
 public class ApplicationDbContext : IdentityDbContext<ApplicationUser>, IApplicationDbContext
 {
-    private readonly IDomainEventService _domainEventService;
-
-    public ApplicationDbContext(
-        DbContextOptions<ApplicationDbContext> options,
-        IDomainEventService domainEventService
-        ) : base(options)
-    {
-        _domainEventService = domainEventService;
-    }
-
     public DbSet<Content> Contents => Set<Content>();
 
     public DbSet<Collection> Collections => Set<Collection>();
 
+    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
-    public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        var events = ChangeTracker.Entries<IHasDomainEvent>()
-                .Select(x => x.Entity.DomainEvents)
-                .SelectMany(x => x)
-                .Where(domainEvent => !domainEvent.IsPublished)
-                .ToArray();
+        modelBuilder.Entity<Content>()
+            .Property(c => c.Title)
+            .HasMaxLength(256);
 
-        var result = await base.SaveChangesAsync(cancellationToken);
+        modelBuilder.Entity<Collection>()
+            .Property(c => c.Title)
+            .HasMaxLength(256);
 
-        await DispatchEvents(events);
 
-        return result;
+        modelBuilder.Entity<Collection>()
+            .Property(c => c.Description)
+            .HasMaxLength(1024);
+
+        base.OnModelCreating(modelBuilder);
     }
+}
 
-    protected override void OnModelCreating(ModelBuilder builder)
+public class ApplicationDbContextFactory : IDesignTimeDbContextFactory<ApplicationDbContext>
+{
+    public ApplicationDbContext CreateDbContext(string[] args)
     {
-        builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
-
-        base.OnModelCreating(builder);
-    }
-
-    private async Task DispatchEvents(DomainEvent[] events)
-    {
-        foreach (var @event in events)
-        {
-            @event.IsPublished = true;
-            await _domainEventService.Publish(@event);
-        }
+        var optionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
+        optionsBuilder.UseInMemoryDatabase("CumioDB");
+        return new ApplicationDbContext(optionsBuilder.Options);
     }
 }

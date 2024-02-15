@@ -38,6 +38,7 @@ app.UseHttpsRedirection();
 app.UseExceptionHandler(app.Environment.IsDevelopment() ? "/error-development" : "/error");
 
 app.UseAuthorization();
+
 app.MapControllers();
 
 app.Run();

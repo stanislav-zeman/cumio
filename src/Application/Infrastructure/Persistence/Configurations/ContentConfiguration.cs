@@ -9,5 +9,7 @@ public class ContentConfiguration : IEntityTypeConfiguration<Content>
     public void Configure(EntityTypeBuilder<Content> builder)
     {
         builder.Ignore(e => e.DomainEvents);
+
+        builder.OwnsOne(c => c.DataLocation);
     }
 }
