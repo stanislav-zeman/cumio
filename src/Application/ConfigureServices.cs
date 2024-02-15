@@ -46,7 +46,6 @@ public static class DependencyInjection
         services.AddScoped<IDomainEventService, DomainEventService>();
         services.AddScoped<IDomainEventService, DomainEventService>();
 
-        services.AddTransient<IDateTime, DateTimeService>();
 
         services.AddAuthentication()
             .AddBearerToken(IdentityConstants.BearerScheme);
