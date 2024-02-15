@@ -2,10 +2,12 @@
 using Cumio.Application.Common.Behaviours;
 using Cumio.Application.Common.Interfaces;
 using Cumio.Application.Infrastructure.Files;
+using Cumio.Application.Infrastructure.Identity;
 using Cumio.Application.Infrastructure.Persistence;
 using Cumio.Application.Infrastructure.Services;
 using FluentValidation;
 using MediatR;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -46,6 +48,19 @@ public static class DependencyInjection
 
         services.AddTransient<IDateTime, DateTimeService>();
         services.AddTransient<ICsvFileBuilder, CsvFileBuilder>();
+
+        services.AddAuthentication()
+            .AddBearerToken(IdentityConstants.BearerScheme);
+
+        services.AddAuthorizationBuilder();
+
+        services
+            .AddIdentityCore<ApplicationUser>()
+            .AddRoles<IdentityRole>()
+            .AddEntityFrameworkStores<ApplicationDbContext>()
+            .AddApiEndpoints();
+
+        services.AddTransient<IIdentityService, IdentityService>();
 
         services.AddSingleton<ICurrentUserService, CurrentUserService>();
 

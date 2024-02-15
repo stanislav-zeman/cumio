@@ -2,11 +2,13 @@
 using Cumio.Application.Common;
 using Cumio.Application.Common.Interfaces;
 using Cumio.Application.Domain.Entities;
+using Cumio.Application.Infrastructure.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Cumio.Application.Infrastructure.Persistence;
 
-public class ApplicationDbContext : DbContext
+public class ApplicationDbContext : IdentityDbContext<ApplicationUser>, IApplicationDbContext
 {
     private readonly ICurrentUserService _currentUserService;
     private readonly IDateTime _dateTime;
