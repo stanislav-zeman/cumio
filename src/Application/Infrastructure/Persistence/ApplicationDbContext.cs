@@ -29,6 +29,12 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>, IApplica
 
     public DbSet<TodoItem> TodoItems => Set<TodoItem>();
 
+    public DbSet<Content> Contents => Set<Content>();
+
+    public DbSet<Collection> Collections => Set<Collection>();
+
+    public DbSet<Account> Accounts => Set<Account>();
+
     public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
     {
         foreach (var entry in ChangeTracker.Entries<BaseAuditableEntity>())
