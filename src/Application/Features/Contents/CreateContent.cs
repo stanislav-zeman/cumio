@@ -38,7 +38,7 @@ public class CreateContentCommandValidator : AbstractValidator<CreateContentComm
         RuleFor(v => v.InputFile)
             .NotNull()
             .NotEmpty()
-            .Must(f => f?.ContentType is "audio/mpeg" or "audio/wav");
+            .Must(f => f?.ContentType == "audio/mpeg");
     }
 }
 
@@ -56,12 +56,12 @@ internal sealed class CreateContentCommandHandler : IRequestHandler<CreateConten
     public async Task<int> Handle(CreateContentCommand request, CancellationToken cancellationToken)
     {
 
-        var dataUrl = await _audioStorageService.UploadAudioFileAsync(request.InputFile!);
+        var location = await _audioStorageService.UploadAudioFileAsync(request.InputFile!);
 
         var entity = new Content()
         {
             Title = request.Title,
-            DataUrl = dataUrl
+            DataLocation = location,
         };
 
         entity.AddDomainEvent(new ContentCreatedEvent(entity));

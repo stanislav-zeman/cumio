@@ -1,3 +1,4 @@
+using Cumio.Application.Domain.ValueObjects;
 using Microsoft.AspNetCore.Http;
 
 namespace Cumio.Application.Common.Interfaces;
@@ -5,7 +6,7 @@ namespace Cumio.Application.Common.Interfaces;
 public interface IAudioStorageService
 {
 
-    Task<string?> UploadAudioFileAsync(IFormFile file);
+    Task<ObjectStorageLocation?> UploadAudioFileAsync(IFormFile file);
 
-    Task<IFormFile?> FetchAudioFileAsync(string sourceId);
+    Task<byte[]?> FetchAudioFileAsync(ObjectStorageLocation location);
 }
