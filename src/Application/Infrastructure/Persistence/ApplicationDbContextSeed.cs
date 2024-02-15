@@ -1,4 +1,4 @@
-﻿using Cumio.Application.Domain.Todos;
+﻿using Cumio.Application.Domain.Entities;
 using Cumio.Application.Domain.ValueObjects;
 
 namespace Cumio.Application.Infrastructure.Persistence;

@@ -1,6 +1,6 @@
 ﻿using System.Globalization;
 using CsvHelper.Configuration;
-using Cumio.Application.Domain.Todos;
+using Cumio.Application.Domain.Entities;
 
 namespace Cumio.Application.Infrastructure.Files.Maps;
 

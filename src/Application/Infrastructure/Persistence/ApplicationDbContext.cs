@@ -1,7 +1,7 @@
 ﻿using System.Reflection;
 using Cumio.Application.Common;
 using Cumio.Application.Common.Interfaces;
-using Cumio.Application.Domain.Todos;
+using Cumio.Application.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace Cumio.Application.Infrastructure.Persistence;
