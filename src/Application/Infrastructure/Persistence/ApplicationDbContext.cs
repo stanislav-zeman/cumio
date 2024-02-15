@@ -20,10 +20,6 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>, IApplica
         _domainEventService = domainEventService;
     }
 
-    public DbSet<TodoList> TodoLists => Set<TodoList>();
-
-    public DbSet<TodoItem> TodoItems => Set<TodoItem>();
-
     public DbSet<Content> Contents => Set<Content>();
 
     public DbSet<Collection> Collections => Set<Collection>();
