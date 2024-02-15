@@ -1,10 +1,6 @@
 {
   "version": 2,
-<<<<<<< Updated upstream
-  "dgSpecHash": "uX7U3m4IKM1hZNTUrF9clogWy/WmL6f/ErXQdYOdjvUza7nb+9pW4mElsMdZ/NOgsrVZidcdQRcQLjQPi/X40w==",
-=======
   "dgSpecHash": "j3hAVIJf4DtyNa+dh5b/+zAvy7B072iIkmNtXDjUTepT9efkq65ZcLCuf7jNVW2E63rM+x2NF8Fcufq6XtxLTQ==",
->>>>>>> Stashed changes
   "success": true,
   "projectFilePath": "/Users/enslaver/Code/courses/pv293/cumio/src/Api/Api.csproj",
   "expectedPackageFiles": [
@@ -123,5 +119,12 @@
     "/Users/enslaver/.nuget/packages/system.threading.tasks.extensions/4.5.4/system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "/Users/enslaver/.nuget/packages/system.windows.extensions/6.0.0/system.windows.extensions.6.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file /Users/enslaver/Code/courses/pv293/cumio/src/Api/obj/project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
