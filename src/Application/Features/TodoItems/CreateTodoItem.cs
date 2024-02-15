@@ -1,5 +1,5 @@
 ﻿using Cumio.Application.Common;
-using Cumio.Application.Domain.Todos;
+using Cumio.Application.Domain.Entities;
 using Cumio.Application.Infrastructure.Persistence;
 using FluentValidation;
 using MediatR;

@@ -1,5 +1,5 @@
 ﻿using Cumio.Application.Common.Models;
-using Cumio.Application.Domain.Todos;
+using Cumio.Application.Domain.Entities;
 using MediatR;
 using Microsoft.Extensions.Logging;
 

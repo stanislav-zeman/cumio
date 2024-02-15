@@ -1,4 +1,4 @@
-﻿using Cumio.Application.Domain.Todos;
+﻿using Cumio.Application.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 

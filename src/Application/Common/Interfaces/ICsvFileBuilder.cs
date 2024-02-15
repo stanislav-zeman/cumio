@@ -1,4 +1,4 @@
-﻿using Cumio.Application.Domain.Todos;
+﻿using Cumio.Application.Domain.Entities;
 
 namespace Cumio.Application.Common.Interfaces;
 
