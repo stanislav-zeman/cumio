@@ -10,17 +10,14 @@ namespace Cumio.Application.Infrastructure.Persistence;
 
 public class ApplicationDbContext : IdentityDbContext<ApplicationUser>, IApplicationDbContext
 {
-    private readonly ICurrentUserService _currentUserService;
     private readonly IDateTime _dateTime;
     private readonly IDomainEventService _domainEventService;
 
     public ApplicationDbContext(
         DbContextOptions<ApplicationDbContext> options,
-        ICurrentUserService currentUserService,
         IDomainEventService domainEventService,
         IDateTime dateTime) : base(options)
     {
-        _currentUserService = currentUserService;
         _domainEventService = domainEventService;
         _dateTime = dateTime;
     }
@@ -42,11 +39,9 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>, IApplica
             switch (entry.State)
             {
                 case EntityState.Added:
-                    entry.Entity.CreatedBy = _currentUserService.UserId;
                     entry.Entity.Created = _dateTime.Now;
                     break;
                 case EntityState.Modified:
-                    entry.Entity.LastModifiedBy = _currentUserService.UserId;
                     entry.Entity.LastModified = _dateTime.Now;
                     break;
                 case EntityState.Detached:

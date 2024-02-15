@@ -62,8 +62,6 @@ public static class DependencyInjection
 
         services.AddTransient<IIdentityService, IdentityService>();
 
-        services.AddSingleton<ICurrentUserService, CurrentUserService>();
-
         return services;
     }
 }
