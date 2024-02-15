@@ -43,10 +43,6 @@ public static class DependencyInjection
                     b => b.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)));
         }
 
-        services.AddScoped<IDomainEventService, DomainEventService>();
-        services.AddScoped<IDomainEventService, DomainEventService>();
-
-
         services.AddAuthentication()
             .AddBearerToken(IdentityConstants.BearerScheme);
 
@@ -58,7 +54,9 @@ public static class DependencyInjection
             .AddEntityFrameworkStores<ApplicationDbContext>()
             .AddApiEndpoints();
 
+        services.AddScoped<IDomainEventService, DomainEventService>();
         services.AddTransient<IIdentityService, IdentityService>();
+        services.AddTransient<IAudioStorageService, AudioStorageService>();
 
         return services;
     }

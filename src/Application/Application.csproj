@@ -41,6 +41,5 @@
   <ItemGroup>
     <Folder Include="Features\Accounts\" />
     <Folder Include="Features\Collections\" />
-    <Folder Include="Features\Contents\" />
   </ItemGroup>
 </Project>
